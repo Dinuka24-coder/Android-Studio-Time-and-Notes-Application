@@ -1,0 +1,120 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cornsilk">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Title at the top -->
+            <TextView
+                android:id="@+id/tvTaskMinderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taskminder_tips"
+                android:fontFamily="@font/alatsi_regular"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Rounded Border -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_image_background"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Tip List -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1_add_tasks_for_your_daily_activities"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2_set_short_term_and_long_term_reminders"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:textColor="@color/black"
+                    android:padding="11dp"
+                    android:textSize="18sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3_use_sound_or_vibration_alerts_for_important_reminders"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_4_use_the_timer_for_timed_activities"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_5_mark_completed_reminders_to_stay_organized"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Image Element Below Tips -->
+            <ImageView
+                android:id="@+id/tipsImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tips"
+                android:scaleType="fitCenter"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/dark_olive_green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
+
+</FrameLayout>

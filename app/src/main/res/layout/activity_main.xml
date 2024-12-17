@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cornsilk">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/alatsi_regular"
+        android:text="@string/welcome_to_taskminder"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/main_interface_image"
+        android:layout_width="274dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/main_interface_image"
+        android:src="@drawable/pr3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alatsi_regular"
+        android:text="@string/time_spent_in_this_session_0_0_0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_interface_image" />
+
+    <Button
+        android:id="@+id/btnTaskList"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/dark_olive_green"
+        android:padding="12dp"
+        android:text="@string/task_list"
+        android:fontFamily="@font/alatsi_regular"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrentTime" />
+
+    <Button
+        android:id="@+id/btnTimer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/dark_olive_green"
+        android:padding="12dp"
+        android:text="@string/timer"
+        android:fontFamily="@font/alatsi_regular"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnSetReminders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTaskList" />
+
+    <Button
+        android:id="@+id/btnSetReminders"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="@color/dark_olive_green"
+        android:padding="12dp"
+        android:text="@string/set_reminders"
+        android:fontFamily="@font/alatsi_regular"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewReminders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTimer" />
+
+    <Button
+        android:id="@+id/btnViewReminders"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="@color/dark_olive_green"
+        android:padding="12dp"
+        android:text="@string/view_reminders"
+        android:fontFamily="@font/alatsi_regular"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvTimeSpent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSetReminders" />
+
+    <TextView
+        android:id="@+id/tvTimeSpent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/alatsi_regular"
+        android:text="@string/you_have_spent_0_hours_0_minutes_in_the_app"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewReminders" />
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/dark_olive_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

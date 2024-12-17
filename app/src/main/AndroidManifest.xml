@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.LabExam03"
+        tools:targetApi="31">
+
+        <!-- Onboarding Activities -->
+        <activity
+            android:name="com.example.labexam03.OnboardingActivity1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.labexam03.OnboardingActivity2"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.labexam03.OnboardingActivity3"
+            android:exported="true" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name="com.example.labexam03.MainActivity"
+            android:exported="true" />
+
+        <!-- Other activities -->
+        <activity android:name="com.example.labexam03.TaskListActivity" />
+        <activity android:name="com.example.labexam03.TimerActivity" />
+        <activity android:name="com.example.labexam03.SetReminderActivity" />
+        <activity android:name="com.example.labexam03.ViewRemindersActivity" />
+
+        <!-- Added Activities -->
+        <activity android:name="com.example.labexam03.TipsPageActivity" />
+        <activity android:name="com.example.labexam03.ProfilePageActivity" />
+
+        <!-- Broadcast receivers -->
+        <receiver android:name="com.example.labexam03.NotificationReceiver"
+            android:exported="false" />
+
+        <receiver android:name="com.example.labexam03.ReminderReceiver"
+            android:exported="false" />
+
+        <!-- App Widget Provider -->
+        <receiver android:name="com.example.labexam03.ReminderWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+
+    </application>
+</manifest>

@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Custom theme for TimePicker to set number and text colors -->
+    <style name="CustomTimePickerTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/black</item> <!-- Sets the main number color -->
+        <item name="android:textColorSecondary">@color/black</item> <!-- Sets AM/PM text color -->
+        <item name="android:timePickerMode">spinner</item>
+        <item name="android:background">@color/cornsilk</item> <!-- Set background color if needed -->
+    </style>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FFF4CC"/> <!-- Your light yellow background color -->
+
+    <corners
+        android:topLeftRadius="40dp"
+        android:topRightRadius="30dp"/> <!-- Curved top corners as per your original design -->
+
+    <stroke
+        android:width="3dp"
+        android:color="#000000"/> <!-- Dark black border with 3dp width -->
+</shape>

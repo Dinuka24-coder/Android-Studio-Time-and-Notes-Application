@@ -1,0 +1,29 @@
+<resources>
+
+    <color name="cornsilk">#FFF8DC</color>  <!--Primary Color-->
+    <color name="black">#000000</color> <!--Secondary Color-->
+    <color name="dark_olive_green">#556B2F</color><!--Button Color-->
+    <color name="semi_transparent_black">#40000000</color>
+
+
+    <!-- Additional Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#03A9F4</color>
+    <color name="yellow">#FFFF96</color>
+    <color name="colorPrimary">#F5FFFA</color>
+    <color name="colorPrimaryDark">#03A9F4</color>
+    <color name="colorAccent">#FFFF00</color>
+
+    <color name="alice_blue">#F0F8FF</color>
+    <color name="teal">#008080</color>
+
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_slate_gray">#2C3E50</color>
+
+    <color name="linen">#FAF0E6</color>
+    <color name="tomato">#FF6347</color>
+
+    <color name="mint_cream">#F5FFFA</color>
+    <color name="steel_blue">#4682B4</color>
+
+</resources>

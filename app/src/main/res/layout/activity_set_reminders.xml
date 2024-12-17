@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/cornsilk"
+    android:padding="0dp"> <!-- Remove padding to prevent space around the navigation -->
+
+    <!-- Input for task description -->
+    <EditText
+        android:id="@+id/editTextTaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alatsi_regular"
+        android:hint="@string/enter_task_description"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/semi_transparent_black"
+        android:textSize="25sp"
+        tools:ignore="Autofill,VisualLintTextFieldSize,TextContrastCheck" />
+
+
+    <!-- Time picker for setting reminder time -->
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/CustomTimePickerTheme" />
+
+
+    <!-- Button to save reminder -->
+    <Button
+        android:id="@+id/btnSaveReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_reminder"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/dark_olive_green"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <!-- Spacer to push content above the navigation bar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_olive_green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
+
+</LinearLayout>
